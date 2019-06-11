@@ -14,8 +14,47 @@
                   font-size: 16px;
                   margin: 4px 2px;
                   cursor: pointer;
+          }          
+            .button2 {background-color: #008CBA;font-size: 10px;} 
+            .button3 {background-color: #f44336;font-size: 13px;}  
+            .button4 {border-radius: 50%;}
+            .button5 span {
+                            cursor: pointer;
+                           display: inline-block;
+                            position: relative;
+                            transition: 0.5s;
             }
-        </style>    
+
+            .button5 span:after {
+                        content: '\00bb';
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                       right: -20px;
+                       transition: 0.5s;
+                    }
+
+            .button5:hover span {
+                   padding-right: 25px;
+            }
+
+            .button5:hover span:after {
+                    opacity: 1;
+                      right: 0;
+            }
+            
+ 
+            
+        </style> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+        var x = 0;
+        $(document).ready(function(){
+        $("div").scroll(function(){
+            $("span").text( x+= 1);
+        });
+        });
+        </script>   
 
     
                 
@@ -43,7 +82,35 @@
             <a href="#" class="button">Link Button</a>
             <button class="button">Button</button>
             <input type="button" class="button" value="Input Button">
-        </div>   
+        </div> 
+        <div>
+            <h2> my fouth post : button colur and size</h2>
+            <button class="button">Green</button>
+            <button class="button button2">Blue,10px</button>
+            <button class="button button3">Red,12 px</button>      
+        </div>
+        <div>
+            <h2>my fifth post: button shape</h2>
+            <button class="button button4">round</button>
+            <h2> my sixth post: animated and hover button</h2>
+            <button class="button button5"><span>hover</span></button>
+        </div>
+        <h2> scroll</h2>
+
+        <div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+            hi, i am samriddhi.i live in ajmer rajasthan.my favourite cartoon is shinchan.my best friends are apeksha,sejal and apoorva.
+            <br><br>
+            my favorite colour is white,pink.
+            
+        </div>
+
+        <p>Scrolled <span>0</span> times.</p>
+
+
+        
+
+
+
 
     </body>
 </html>        
